@@ -8,7 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.catchThrowable;
-import static org.junit.Assert.*;
+
 
 @RunWith(MockitoJUnitRunner.class)
 public class LionTest extends TestCase {
@@ -44,7 +44,7 @@ public class LionTest extends TestCase {
     @Test
     public void shouldBeMane() throws Exception {
         Lion lion = new Lion("Самка", feline);
-        boolean a = lion.doesHaveMane();
-        Assert.assertEquals(false, a);
+        boolean hasMane = lion.doesHaveMane();
+        assertFalse(hasMane);
     }
 }
